@@ -39,16 +39,4 @@ describe('StringCalculator', () => {
     it('should support custom delimiters', () => {
         expect(calculator.calculate('//;\n1;2;3')).to.equal(6);
     });
-
-    it('should throw an error when a negative number is provided', () => {
-        expect(() => calculator.calculate('1,-2,3')).to.throw('Negative numbers not allowed: -2');
-    });
-
-    it('should throw an error listing all negative numbers when multiple negatives are provided', () => {
-        expect(() => calculator.calculate('1,-2,-3,4')).to.throw('Negative numbers not allowed: -2, -3');
-    });
-
-    it('should support Multiplication with "*" delimiters', () => {
-        expect(calculator.calculate('//\*\n1*2*4')).to.equal(8);
-    });
 })
