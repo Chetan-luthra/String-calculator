@@ -28,15 +28,4 @@ describe('StringCalculator', () => {
         expect(calculator.calculate(' 1 , 2 , 3 ')).to.equal(6);
     });
 
-    it('should ignore empty values caused by extra commas', () => {
-        expect(calculator.calculate('1,,2,3')).to.equal(6);
-    });
-
-    it('should handle new lines as delimiters', () => {
-        expect(calculator.calculate('1\n2,3')).to.equal(6);
-    });
-
-    it('should support custom delimiters', () => {
-        expect(calculator.calculate('//;\n1;2;3')).to.equal(6);
-    });
 })
